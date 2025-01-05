@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit Returns in Arrow Functions</title>
+</head>
+<body>
+    <h1>Check Console for Output</h1>
+
+    <script>
+        // Arrow function with implicit return for squaring a number
+        const square = (number) => number * number;
+        console.log(`Square of 6: ${square(6)}`); // Output: 36
+
+        // Arrow function with implicit return for adding two numbers
+        const add = (a, b) => a + b;
+        console.log(`Sum of 4 and 5: ${add(4, 5)}`); // Output: 9
+
+        // Arrow function with implicit return for an object
+        const getPerson = (name, age) => ({ name, age });
+        console.log(getPerson("Bob", 25)); // Output: { name: "Bob", age: 25 }
+    </script>
+</body>
+</html>
