@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function Example</title>
+</head>
+<body>
+
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+
+    <main>
+        <p id="output"></p>
+    </main>
+
+    <script>
+        // Arrow function with parameters
+        const calculateTotal = (items, taxRate) => {
+            const subtotal = items.reduce((total, item) => total + item.price, 0);
+            const tax = subtotal * taxRate;
+            return subtotal + tax;
+        };
+
+        // Example usage
+        const cartItems = [
+            { name: "Shoes", price: 50 },
+            { name: "T-shirt", price: 20 },
+            { name: "Hat", price: 15 },
+        ];
+        const taxRate = 0.1; // 10%
+
+        // Calculate total
+        const total = calculateTotal(cartItems, taxRate);
+
+        // Display the total in the output paragraph
+        document.getElementById('output').textContent = `Total: $${total.toFixed(2)}`;
+    </script>
+
+</body>
+</html>
